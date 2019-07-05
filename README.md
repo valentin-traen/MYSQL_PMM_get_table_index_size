@@ -1,4 +1,4 @@
-# pmm_get_tale_index_size
+# pmm_get_table_index_size
 Get table and Index size on MySQL instances wich many tables
 
 By default, table metrics are disabled in PMM if there are more than 1000 tables. It's due to the way that information_schema works.
