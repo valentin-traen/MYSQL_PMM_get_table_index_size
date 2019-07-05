@@ -22,3 +22,7 @@ Don't forget to GRANT your pmm user :
 GRANT EXECUTE ON PROCEDURE mysql.proc_pmm_update_table_index_size TO 'pmm'@'localhost';
 GRANT UPDATE, INSERT ON mysql.* TO 'pmm'@'localhost';
 ```
+
+Dont' forget to update your queries-mysqld.yml.
+
+Of course the execution of the PROCEDURE can be longer than the execution of the full query BUT all the queries run by the PROCEDURE are optimized. You will not have peak RAM or CPU usage with this method unlike the other.
