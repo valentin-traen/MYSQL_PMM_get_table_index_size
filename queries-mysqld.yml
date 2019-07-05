@@ -1,0 +1,24 @@
+mysql_custom_metric_get_table_size:
+  query: "SELECT TABLE_SCHEMA,TABLE_NAME,DATA_LENGTH AS VALUE FROM mysql.pmm_custom_informations_data_index_size;"
+  metrics:
+    - TABLE_SCHEMA:
+        usage: "LABEL"
+        description: "The name of the MySQL schema"
+    - TABLE_NAME:
+        usage: "LABEL"
+        description: "The name of the MySQL table"
+    - VALUE:
+        usage: "GAUGE"
+        description: "Size of MySQL table"
+mysql_custom_metric_get_index_size:
+  query: "SELECT TABLE_SCHEMA,TABLE_NAME,INDEX_LENGTH AS VALUE FROM mysql.pmm_custom_informations_data_index_size;"
+  metrics:
+    - TABLE_SCHEMA:
+        usage: "LABEL"
+        description: "The name of the MySQL schema"
+    - TABLE_NAME:
+        usage: "LABEL"
+        description: "The name of the MySQL table"
+    - VALUE:
+        usage: "GAUGE"
+        description: "Size of MySQL index"
