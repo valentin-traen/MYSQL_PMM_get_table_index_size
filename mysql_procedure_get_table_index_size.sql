@@ -32,7 +32,7 @@ END IF;
       SET done = 0;
 		  INSERT INTO mysql.pmm_custom_informations_data_index_size (TABLE_SCHEMA,TABLE_NAME,DATA_LENGTH, INDEX_LENGTH) VALUES (databasename,tablename,inf_datalength,inf_indexlength);
 		ELSE
-			IF inf_datalength != pmm_datalenght
+			IF inf_datalength != pmm_datalength
 			THEN
 			SELECT 'Màj';
 		   UPDATE mysql.pmm_custom_informations_data_index_size SET DATA_LENGTH = inf_datalength, INDEX_LENGTH = inf_indexlength WHERE BINARY TABLE_SCHEMA = databasename AND BINARY TABLE_NAME = tablename;
